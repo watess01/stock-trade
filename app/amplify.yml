@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Amplify pre-build - NPM install started on `date`"
+        - cd app
+        - npm install
+    build:
+      commands:
+        - echo "Amplify build - Build started on `date`"
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*

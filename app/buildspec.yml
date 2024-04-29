@@ -1,0 +1,21 @@
+# buildspec to build the react app to amplify
+version: 0.2
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "NPM install started on `date`"
+        - npm install
+    build:
+      commands:
+        - echo "Build started on `date`"
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
+  appRoot: app

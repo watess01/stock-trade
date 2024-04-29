@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: lightgoldenrodyellow;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.label-pair {
+  display: flex;
+  align-items: center; /* This will align the TextField elements vertically */
+  justify-content: space-between; /* This will add space between the TextField elements */
+}
+
+.MuiInputBase-input {
+  height: 100px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.input-text input,
+.input-text .MuiInputBase-inputMultiline {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  border: 1px solid #cccccc; /* Grey border */
+  text-align: left;
+}
+
+.readonly-text input,
+.readonly-text .MuiInputBase-inputMultiline {
+  background-color: bisque; /* Light grey background */
+  color: #808080; /* Dark grey text */
+  border: 1px solid #cccccc; /* Grey border */
+  text-align: left;
+}
+
+/* div {
+  border: 1px solid black;
+} */
+.button-style:enabled {
+  background-color: #3f51b5; /* Change as needed */
+  color: white; /* Change as needed */
+}
+
+.button-style:disabled {
+  background-color: #cccccc; /* Change as needed */
+  color: #666666; /* Change as needed */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
